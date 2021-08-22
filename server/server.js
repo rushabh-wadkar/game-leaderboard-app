@@ -11,9 +11,10 @@ const mongo = {
   password: process.env.MONGO_PASSWORD,
   db: process.env.MONGO_DB,
   collection: process.env.MONGO_COLLECTION_NAME,
+  hostname: process.env.MONGO_CLUSTER_URL
 };
 mongoose.connect(
-  `mongodb+srv://${mongo.username}:${mongo.password}@rushabhcluster.98gcc.mongodb.net/${mongo.db}?retryWrites=true&w=majority`,
+  `mongodb+srv://${mongo.username}:${mongo.password}@${mongo.hostname}/${mongo.db}?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
 );
 
