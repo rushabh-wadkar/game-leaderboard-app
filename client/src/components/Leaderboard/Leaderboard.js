@@ -45,25 +45,36 @@ const Leaderboard = ({ loading, error, data, fetchData }) => {
   if (loading) {
     return <h2>Loading</h2>;
   }
-  if (!data.length) {
-    return <h3>No Data</h3>;
-  }
   return (
     <div className="container accented">
       <h2>
-        <em>Leaderboard</em>
+        <em>
+          <img src="/leaderboard.png" width="32"></img> &nbsp;&nbsp;Leaderboard
+        </em>
       </h2>
-      <LeaderboardList
-        data={data}
-        sortHandler={onSort}
-        sortBy={sortBy}
-        sortOn={sortOn}
-      />
-      <Pagination
-        page={page}
-        nextPageHandler={onNextPage}
-        previousPageHandler={onPreviousPage}
-      />
+      {!data.length ? (
+        <>
+          <h3>No Data to show</h3>
+          <span>
+            Can you try hitting endpoint /api/leaderboard/import (this would
+            dump json into db)
+          </span>
+        </>
+      ) : (
+        <>
+          <LeaderboardList
+            data={data}
+            sortHandler={onSort}
+            sortBy={sortBy}
+            sortOn={sortOn}
+          />
+          <Pagination
+            page={page}
+            nextPageHandler={onNextPage}
+            previousPageHandler={onPreviousPage}
+          />
+        </>
+      )}
     </div>
   );
 };

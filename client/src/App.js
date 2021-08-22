@@ -6,15 +6,31 @@ const App = () => {
     <div className="App">
       <Leaderboard />
       <div className="stack-info">
-        <h3>Tech Stack</h3>
+        <h3>
+          Tech <span style={{ color: "yellowgreen" }}>Stack</span>
+        </h3>
         <span>REACT, NODE, MONGO</span>
       </div>
       <div>
-        <h3>Features implemented</h3>
+        <h3>
+          Features <span style={{ color: "yellowgreen" }}>implemented</span>
+        </h3>
         <ul>
           <li>Realtime leaderboard</li>
           <li>
             Rest API based backend architecture (Endpoints at /api/leaderboard)
+          </li>
+          <li>
+            Dumping/Importing provided{" "}
+            <a
+              href="https://s3-ap-southeast-1.amazonaws.com/he-public-data/TopSellingGamesbb1c49e.json"
+              rel="noreferrer"
+              target="_blank"
+            >
+              json
+            </a>{" "}
+            into mongo directly by hitting endpoint /api/leaderboard/import
+            (this imports the json from aws and dumps into mongo collection)
           </li>
           <li>
             Editable cells (User can click on any cells to edit, on clicking
@@ -30,7 +46,10 @@ const App = () => {
           </li>
           <li>Deployment of build on Free-tier hosting provider (HEROKU)</li>
         </ul>
-        <h3>Features not implemented due to time-limit</h3>
+        <h3>
+          Features <span style={{ color: "red" }}>not implemented</span> due to
+          time-limit
+        </h3>
         <ul>
           <li>Search functionality</li>
         </ul>

@@ -20,6 +20,11 @@ body {
   padding: 1rem;
   flex-flow: column;
   align-items: center;
+  min-height: 75vh;
+}
+
+[contenteditable="true"]:focus {
+  background-color: rgb(170, 170, 0);
 }
 
 .surface {
@@ -34,6 +39,10 @@ button.primary {
 button.secondary {
   background-color: #00897d;
   color: white;
+}
+
+a {
+  color: yellowgreen;
 }
 
 .accented {
