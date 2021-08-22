@@ -5,7 +5,7 @@ const LeaderboardItem = ({ item }) => {
     const _id = e.target.parentElement.id;
     const key = e.target.dataset.tag;
     axios
-      .post("http://localhost:4000/api/leaderboard/update", { key, value, _id })
+      .post("/api/leaderboard/update", { key, value, _id })
       .then((response) => {
         console.log(response);
       });

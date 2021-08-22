@@ -30,7 +30,7 @@ export const fetchLeaderboard = (page = 1, sort = "asc", sortOn = "Rank") => {
     dispatch(fetchData);
     axios
       .get(
-        `http://localhost:4000/api/leaderboard?page=${page}&sortBy=${sort}&sortOn=${sortOn}`
+        `/api/leaderboard?page=${page}&sortBy=${sort}&sortOn=${sortOn}`
       )
       .then((response) => {
         const data = response.data;
