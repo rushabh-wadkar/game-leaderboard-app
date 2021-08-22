@@ -1,0 +1,11 @@
+.pagination {
+  margin-top: 10px;
+}
+.pagination > span {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.pagination span:hover {
+  background-color: #102a43;
+}
