@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const routes = require("./routes/app.router.js");
 const mongoose = require("mongoose");
+
 const path = __dirname + '/views/';
 
 // Connect to db
