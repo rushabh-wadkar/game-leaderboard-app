@@ -1,6 +1,6 @@
 # Games Leaderboard Application
 
-This application was developed using React, Node with MongoDB as backend in 6 hours.
+This application was developed using React, React-Redux, Node with MongoDB as backend in 6 hours.
 
 Deployed on [Heroku](https://games-leaderboard-test.herokuapp.com/)
 
