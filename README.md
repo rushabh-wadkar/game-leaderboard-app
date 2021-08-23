@@ -6,7 +6,7 @@ Deployed on [Heroku](https://games-leaderboard-test.herokuapp.com/)
 
 ## Features
 - Realtime leaderboard
-- **No custom libraries for table sort/filter/fetching** was used in developing this project.
+- **No custom libraries for table sort/filter/fetching** were used in developing this project or its components.
 - Rest API based backend architecture (Endpoints at /api/leaderboard)
 - Dumping/Importing [provided json](https://s3-ap-southeast-1.amazonaws.com/he-public-data/TopSellingGamesbb1c49e.json) into mongo directly by hitting endpoint `/api/leaderboard/import` (this imports the json from aws and dumps into mongo collection)
 - Editable cells (User can click on any cells to edit, on clicking outside would result in value persistence to db)
